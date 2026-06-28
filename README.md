@@ -8,7 +8,7 @@ Full-stack portfolio site built with the MERN stack: React + Vite frontend · Ex
 
 ```
 upwork-fullstack-personal-website/
-├── anup_portfolio_frontend/   ← React + Vite
+├── frontend/   ← React + Vite
 │   ├── src/
 │   │   ├── api/client.js
 │   │   ├── components/
@@ -24,8 +24,7 @@ upwork-fullstack-personal-website/
 │   ├── vite.config.js
 │   └── package.json
 │
-└── anup_portfolio_backend/    ← Express + Node.js + MongoDB
-
+└── backend/    ← Express + Node.js + MongoDB
     ├── config/db.js
     ├── middleware/auth.js
     ├── models/index.js
