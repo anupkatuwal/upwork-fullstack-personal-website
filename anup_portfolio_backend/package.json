@@ -1,5 +1,5 @@
 {
-  "name": "anup-portfolio-backend",
+  "name": "fullstack-portfolio-backend",
   "version": "2.0.0",
   "type": "module",
   "main": "server.js",

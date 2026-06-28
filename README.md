@@ -7,7 +7,7 @@ Full-stack portfolio site built with the MERN stack: React + Vite frontend · Ex
 ## Project Structure
 
 ```
-portfolio/
+upwork-fullstack-personal-website/
 ├── anup_portfolio_frontend/   ← React + Vite
 │   ├── src/
 │   │   ├── api/client.js
@@ -25,6 +25,7 @@ portfolio/
 │   └── package.json
 │
 └── anup_portfolio_backend/    ← Express + Node.js + MongoDB
+
     ├── config/db.js
     ├── middleware/auth.js
     ├── models/index.js
@@ -43,7 +44,7 @@ portfolio/
 ## Backend Setup
 
 ```bash
-cd anup_portfolio_backend
+cd anup_portfolio_backend  # folder name inside the repo
 
 # Install dependencies
 npm install
@@ -69,7 +70,7 @@ For MongoDB Atlas:
 ## Frontend Setup
 
 ```bash
-cd anup_portfolio_frontend
+cd anup_portfolio_frontend  # folder name inside the repo
 
 # Install dependencies
 npm install
