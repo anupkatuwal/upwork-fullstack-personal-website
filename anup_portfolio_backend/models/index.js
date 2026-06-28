@@ -43,6 +43,20 @@ export const Education = mongoose.model("Education", new mongoose.Schema({
   order:       { type: Number, default: 0 },
 }));
 
+// ── Profile ───────────────────────────────────────────────
+export const Profile = mongoose.model("Profile", new mongoose.Schema({
+  name:           { type: String, required: true },
+  title:          String,
+  summary:        String,
+  email:          String,
+  phone:          String,
+  location:       String,
+  github:         String,
+  linkedin:       String,
+  resumeUrl:      String,
+  certifications: [{ name: String, org: String, year: String }],
+}, { timestamps: true }));
+
 // ── Contact ───────────────────────────────────────────────
 export const Contact = mongoose.model("Contact", new mongoose.Schema({
   name:    { type: String, required: true },

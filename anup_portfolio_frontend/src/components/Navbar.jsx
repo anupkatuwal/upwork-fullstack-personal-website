@@ -34,9 +34,9 @@ export default function Navbar() {
             background:"linear-gradient(135deg, var(--cyan), var(--violet))",
             display:"grid", placeItems:"center",
             fontFamily:"var(--mono)", fontWeight:700, fontSize:13, color:"var(--bg)",
-          }}>AK</div>
+          }}>AR</div>
           <span style={{ fontFamily:"var(--display)", fontWeight:700, fontSize:16, color:"var(--text)" }}>
-            Anup Katuwal
+            Alex Rivera
           </span>
         </a>
 

@@ -14,14 +14,14 @@ export default function Footer() {
               background:"linear-gradient(135deg, var(--cyan), var(--violet))",
               display:"grid", placeItems:"center",
               fontFamily:"var(--mono)", fontWeight:700, fontSize:12, color:"var(--bg)",
-            }}>AK</div>
-            <span style={{ fontFamily:"var(--display)", fontWeight:700, fontSize:15, color:"var(--text)" }}>Anup Katuwal</span>
+            }}>AR</div>
+            <span style={{ fontFamily:"var(--display)", fontWeight:700, fontSize:15, color:"var(--text)" }}>Alex Rivera</span>
           </div>
           <p style={{ fontFamily:"var(--mono)", fontSize:10, color:"var(--text-3)", letterSpacing:"0.06em", marginBottom:16 }}>
-            Data Analyst · NLP Researcher · Aspiring Lecturer
+            Data Analyst · NLP Researcher · ML Engineer
           </p>
           <p style={{ fontSize:12, color:"var(--text-3)" }}>
-            © {new Date().getFullYear()} Anup Katuwal. All rights reserved.
+            © {new Date().getFullYear()} Alex Rivera. All rights reserved.
           </p>
         </div>
 
@@ -41,9 +41,9 @@ export default function Footer() {
         <div>
           <p style={{ fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.2em", color:"var(--cyan)", textTransform:"uppercase", marginBottom:14 }}>Connect</p>
           {[
-            { label:"GitHub",   href:"https://github.com/anupkatuwal" },
-            { label:"LinkedIn", href:"https://linkedin.com/in/anup-katuwal-004b7884" },
-            { label:"Email",    href:"mailto:katuwalanup@gmail.com" },
+            { label:"GitHub",   href:"https://github.com/alex-rivera-dev" },
+            { label:"LinkedIn", href:"https://linkedin.com/in/alex-rivera-ml" },
+            { label:"Email",    href:"mailto:alex.rivera.dev@protonmail.com" },
           ].map(l => (
             <a key={l.label} href={l.href} target="_blank" rel="noreferrer" style={{
               display:"block", fontSize:13, color:"var(--text-3)", marginBottom:8, transition:"color 0.2s",

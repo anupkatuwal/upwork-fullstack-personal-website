@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useFetch } from "../../hooks/index.js";
+import { getProfile } from "../../api/client.js";
 import { sendContact } from "../../api/client.js";
 
 const inputStyle = {
@@ -9,6 +11,7 @@ const inputStyle = {
 };
 
 export default function Contact() {
+  const { data: profile } = useFetch(getProfile);
   const [form, setForm]   = useState({ name:"", email:"", subject:"", message:"" });
   const [status, setStatus] = useState(null);
 
@@ -35,14 +38,14 @@ export default function Contact() {
           {/* Info */}
           <div>
             <p style={{ fontSize:15, color:"var(--text-2)", lineHeight:1.8, marginBottom:36 }}>
-              Whether you want to discuss data analytics, NLP projects, teaching, or potential collaborations — feel free to reach out.
+              Whether you want to discuss data analytics, NLP research, ML projects, or potential collaborations — feel free to reach out.
             </p>
 
             {[
-              { icon:"📍", label:"Location",  val:"Kathmandu, Nepal",               href:null },
-              { icon:"✉️", label:"Email",     val:"katuwalanup@gmail.com",           href:"mailto:katuwalanup@gmail.com" },
-              { icon:"📞", label:"Phone",     val:"+977 9745947888",                href:"tel:+9779745947888" },
-              { icon:"🔗", label:"LinkedIn",  val:"anup-katuwal-004b7884",          href:"https://linkedin.com/in/anup-katuwal-004b7884" },
+              { icon:"📍", label:"Location",  val: profile?.location  || "San Francisco, CA, USA",  href:null },
+              { icon:"✉️", label:"Email",     val: profile?.email     || "alex.rivera.dev@protonmail.com", href: profile?.email ? `mailto:${profile.email}` : "mailto:alex.rivera.dev@protonmail.com" },
+              { icon:"📞", label:"Phone",     val: profile?.phone     || "+1 (415) 555-0182",         href: profile?.phone ? `tel:${profile.phone.replace(/\D/g,"")}` : null },
+              { icon:"🔗", label:"LinkedIn",  val: "alex-rivera-ml",                                  href: profile?.linkedin || "https://linkedin.com/in/alex-rivera-ml" },
             ].map(d => (
               <div key={d.label} style={{ display:"flex", gap:16, marginBottom:20 }}>
                 <span style={{ fontSize:20, width:32, textAlign:"center", flexShrink:0 }}>{d.icon}</span>
@@ -59,7 +62,7 @@ export default function Contact() {
             {/* Currently open */}
             <div style={{ background:"var(--surface)", border:"1px solid var(--border)", borderLeft:"3px solid var(--cyan)", borderRadius:"0 10px 10px 0", padding:"18px 20px", marginTop:32 }}>
               <p style={{ fontFamily:"var(--mono)", fontSize:9, letterSpacing:"0.18em", textTransform:"uppercase", color:"var(--cyan)", marginBottom:12 }}>Currently open to</p>
-              {["Data & Analytics roles", "NLP research collaborations", "Lecturer / Teaching positions", "Freelance data projects"].map(f => (
+              {["Data & Analytics roles", "NLP research collaborations", "ML engineering contracts", "Freelance data projects"].map(f => (
                 <p key={f} style={{ display:"flex", gap:10, fontSize:13, color:"var(--text-2)", marginBottom:6 }}>
                   <span style={{ color:"var(--violet)" }}>→</span>{f}
                 </p>

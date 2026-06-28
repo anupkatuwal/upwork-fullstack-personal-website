@@ -1,13 +1,13 @@
-# Anup Katuwal — Portfolio v2 (MERN Stack)
+# MERN Stack Portfolio — Full-Stack Web Application
 
-Full-stack portfolio: React + Vite frontend · Express + Node.js backend · MongoDB database.
+Full-stack portfolio site built with the MERN stack: React + Vite frontend · Express + Node.js backend · MongoDB database.
 
 ---
 
 ## Project Structure
 
 ```
-anup-portfolio/
+portfolio/
 ├── anup_portfolio_frontend/   ← React + Vite
 │   ├── src/
 │   │   ├── api/client.js

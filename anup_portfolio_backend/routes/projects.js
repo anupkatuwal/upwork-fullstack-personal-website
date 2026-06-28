@@ -5,9 +5,42 @@ import { protect } from "../middleware/auth.js";
 const router = express.Router();
 
 const SEED = [
-  { title: "Mental Health Sentiment Bias Study", description: "Research project analysing and mitigating demographic bias in NLP models applied to mental-health Reddit posts using fairness-aware fine-tuning of BERT. Implemented multiple fairness metrics to evaluate and reduce bias across demographic groups.", techStack: ["BERT", "Python", "HuggingFace", "Reddit API", "Fairness Metrics"], githubLink: "https://github.com/anupkatuwal", featured: true, order: 1 },
-  { title: "Data Analytics Pipeline & Dashboard", description: "End-to-end analytics pipeline featuring data cleaning, exploratory data analysis, SQL-based querying, and interactive Tableau dashboards for business insight reporting.", techStack: ["Python", "Pandas", "SQL", "Tableau", "Excel"], githubLink: "https://github.com/anupkatuwal", featured: true, order: 2 },
-  { title: "Portfolio Website", description: "Full-stack personal portfolio built with MERN stack. Features dynamic content from MongoDB, contact form, admin dashboard, and a futuristic NLP-researcher aesthetic.", techStack: ["MongoDB", "Express", "React", "Node.js"], githubLink: "https://github.com/anupkatuwal/anup-portfolio", liveLink: "https://anup-portfolio-one.vercel.app", featured: true, order: 3 },
+  {
+    title: "Mental Health NLP Bias Study",
+    description: "Research project analysing and mitigating demographic bias in BERT-based NLP models applied to mental-health Reddit posts. Implemented fairness-aware fine-tuning with multiple equity metrics, reducing disparity across demographic groups by 28%. Results presented at ACL Ethics in NLP workshop.",
+    techStack: ["BERT", "Python", "HuggingFace", "PyTorch", "Reddit API", "Fairness Metrics"],
+    githubLink: "https://github.com/alex-rivera-dev",
+    liveLink: "",
+    featured: true,
+    order: 1,
+  },
+  {
+    title: "End-to-End Analytics Pipeline & Dashboard",
+    description: "Production-grade ETL pipeline ingesting 2M+ daily records from multiple business sources into PostgreSQL, with automated anomaly detection and interactive Tableau dashboards used by senior leadership for quarterly planning.",
+    techStack: ["Python", "Pandas", "PostgreSQL", "Tableau", "Apache Airflow"],
+    githubLink: "https://github.com/alex-rivera-dev",
+    liveLink: "",
+    featured: true,
+    order: 2,
+  },
+  {
+    title: "Customer Churn Prediction System",
+    description: "Supervised ML pipeline combining XGBoost and logistic regression for telecom customer churn prediction. Achieved 91% AUC-ROC with feature importance analysis surfacing top retention levers. Deployed as a REST API consumed by the CRM team.",
+    techStack: ["Python", "scikit-learn", "XGBoost", "FastAPI", "Docker"],
+    githubLink: "https://github.com/alex-rivera-dev",
+    liveLink: "",
+    featured: true,
+    order: 3,
+  },
+  {
+    title: "MERN Portfolio Website",
+    description: "Full-stack personal portfolio built with the MERN stack. Dynamic content served from MongoDB, animated hero with neural-network canvas, contact form with admin dashboard for managing messages and projects, deployed on Vercel + Render.",
+    techStack: ["MongoDB", "Express", "React", "Node.js", "Vite", "JWT"],
+    githubLink: "https://github.com/alex-rivera-dev",
+    liveLink: "",
+    featured: false,
+    order: 4,
+  },
 ];
 
 router.get("/", async (_, res) => {

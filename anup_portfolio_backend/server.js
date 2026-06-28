@@ -16,7 +16,7 @@ const app = express();
 app.use(cors({ origin: process.env.FRONTEND_URL || "*", credentials: true }));
 app.use(express.json());
 
-app.get("/", (_, res) => res.json({ message: "Anup Portfolio API v2 ✓" }));
+app.get("/", (_, res) => res.json({ message: "Portfolio API v2 ✓" }));
 app.use("/api/portfolio", portfolioRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/contact", contactRoutes);
